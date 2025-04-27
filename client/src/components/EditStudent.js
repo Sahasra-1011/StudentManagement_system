@@ -19,7 +19,7 @@ const EditStudent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/students/${id}`)
+    axios.get(`https://student-mangment-abc.onrender.com/${id}`)
       .then((res) => setStudent(res.data))
       .catch((err) => console.error('Error fetching student:', err));
   }, [id]);
