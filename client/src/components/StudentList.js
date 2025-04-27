@@ -5,7 +5,7 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
 
   const fetchStudents = async () => {
-    const res = await fetch('https://student-mangment-abc.onrender.com/api/students');
+    const res = await fetch('https://studentmanagement-system-exp4.onrender.com/api/students');
     const data = await res.json();
     setStudents(data);
   };
@@ -16,7 +16,7 @@ const StudentList = () => {
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this student?')) {
-      await fetch(`https://student-mangment-abc.onrender.com/api/students/${id}`, {
+      await fetch(`https://studentmanagement-system-exp4.onrender.com/api/students/${id}`, {
         method: 'DELETE',
       });
       alert('Student deleted!');
