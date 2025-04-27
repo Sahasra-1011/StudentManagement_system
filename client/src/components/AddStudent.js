@@ -23,7 +23,7 @@ const AddStudent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('https://student-mangment-abc.onrender.com/api/students', {
+    const res = await fetch('https://studentmanagement-system-exp4.onrender.com/api/students', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(student),
