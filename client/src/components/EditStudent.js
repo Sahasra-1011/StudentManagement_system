@@ -19,7 +19,7 @@ const EditStudent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`https://student-mangment-abc.onrender.com/api/students/${id}`)
+    axios.get(`https://studentmanagement-system-exp4.onrender.com/api/students/${id}`)
       .then((res) => setStudent(res.data))
       .catch((err) => console.error('Error fetching student:', err));
   }, [id]);
