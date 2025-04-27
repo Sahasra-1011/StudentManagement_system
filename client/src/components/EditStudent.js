@@ -19,7 +19,7 @@ const EditStudent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`https://student-mangment-abc.onrender.com/${id}`)
+    axios.get(`https://student-mangment-abc.onrender.com/api/students/${id}`)
       .then((res) => setStudent(res.data))
       .catch((err) => console.error('Error fetching student:', err));
   }, [id]);
@@ -35,7 +35,7 @@ const EditStudent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/students/${id}`, student);
+      await axios.put(`https://student-mangment-abc.onrender.com/api/students/${id}`, student);
       navigate('/list');
     } catch (error) {
       console.error('Error updating student:', error);
