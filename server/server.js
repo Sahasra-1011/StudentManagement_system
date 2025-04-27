@@ -5,12 +5,12 @@ const connectDB = require('./config/db');
 const studentRoutes = require('./routes/studentRoutes');
 
 dotenv.config();
-connectDB();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
+connectDB();
 app.use('/api/students', studentRoutes);
 
 const PORT = process.env.PORT || 5000;
