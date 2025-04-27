@@ -35,7 +35,7 @@ const EditStudent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://student-mangment-abc.onrender.com/api/students/${id}`, student);
+      await axios.put(`https://studentmanagement-system-exp4.onrender.com/api/students/${id}`, student);
       navigate('/list');
     } catch (error) {
       console.error('Error updating student:', error);
